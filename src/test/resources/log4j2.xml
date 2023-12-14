@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout
+            pattern="%highlight{%d{HH:mm:ss.SSS} [%t] %-5level %logger}{FATAL=red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue, TRACE=blue} - %highlight{%msg%n}{FATAL=red,ERROR=red}"
+            disableAnsi="false"/>
+        </Console>
+        <File name="FileAppender" fileName="target/log/application-${date:yyyyMMdd_HHmmss}.log"
+        immediateFlush="false" append="true">
+            <PatternLayout
+                pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger - %msg%n"
+                disableAnsi="false"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
