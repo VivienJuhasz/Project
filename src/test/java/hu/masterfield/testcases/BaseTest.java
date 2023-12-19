@@ -34,7 +34,7 @@ public class BaseTest implements TestWatcher {
     public static void setup() {
         logger.info("BaseTest.setup called.");
 
-        driver = WebBrowser.createDriver(WebBrowserType.Chrome);
+        driver = WebBrowser.createDriver(WebBrowserType.ChromeSM);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));

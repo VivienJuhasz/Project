@@ -162,9 +162,9 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.10.0</version>
                 <configuration>
-                    <reportVersion>2.24.0</reportVersion>
+                    <reportVersion>2.25.0</reportVersion>
                     <allureDownloadUrl>
-                        https://github.com/allure-framework/allure2/releases/download/2.24.0/allure-2.24.0.zip
+                        https://github.com/allure-framework/allure2/releases/download/2.25.0/allure-2.25.0.zip
                     </allureDownloadUrl>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                 </configuration>
