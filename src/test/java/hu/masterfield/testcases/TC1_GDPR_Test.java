@@ -1,6 +1,7 @@
 package hu.masterfield.testcases;
 
 import hu.masterfield.pages.GDPRBannerPage;
+import hu.masterfield.pages.LoginPage;
 import hu.masterfield.utils.Screenshot;
 import io.qameta.allure.Description;
 import org.apache.logging.log4j.LogManager;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.TestInfo;
 
 import java.io.IOException;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -37,6 +39,17 @@ public class TC1_GDPR_Test extends BaseTest{
         Screenshot.takesScreenshot(driver);
         logger.info("Login page will be opened.");
         logger.info("Login");
+        LoginPage loginPage = new LoginPage(driver);
+        assertTrue(loginPage.isLoaded());
+
+        /*
+        A sütik elfogadására szolgáló ablak vizsgálata, hogy
+        az elfogadás után látható-e még.
+         */
+
+        assertFalse(loginPage.isCookieVisible());
+        Screenshot.takesScreenshot(driver);
+
         //Thread.sleep(5000);
     }
 }
