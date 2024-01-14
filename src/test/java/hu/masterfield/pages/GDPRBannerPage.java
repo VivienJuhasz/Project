@@ -35,7 +35,7 @@ public class GDPRBannerPage extends BasePage{
         return isLoaded(okButton);
     }
     @Step("Cookie-k elfogadása")
-    public void acceptCookie() {
+    public void acceptCookies() {
         okButton.click();
         logger.info("Ok button clicked.");
     }

@@ -27,6 +27,7 @@ public class TC1_GDPR_Test extends BaseTest{
     @Description("TC1 - GDPR nyilatkozat sikeres elfogadása")
     @Tag("TC1")
     @Tag("GDPR")
+
     public void test_TC1_GDPR(TestInfo testInfo) throws IOException, InterruptedException {
         logger.info(testInfo + " started");
         //Thread.sleep(5000);
@@ -35,7 +36,7 @@ public class TC1_GDPR_Test extends BaseTest{
         /* A süti elfogadására szolgáló ablak megjelenítésének ellenőrzése */
         assertTrue(gdprPage.isCookieMessageVisible());
         Screenshot.takesScreenshot(driver);
-        gdprPage.acceptCookie();
+        gdprPage.acceptCookies();
         Screenshot.takesScreenshot(driver);
         logger.info("Login page will be opened.");
         logger.info("Login");
