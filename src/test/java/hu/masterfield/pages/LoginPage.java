@@ -146,18 +146,4 @@ public class LoginPage extends BasePage {
         logger.info("isCookieVisible= " + isCookieVisible);
         return isCookieVisible;
     }
-
-    public void setTextbox(WebElement webElement, String webElementName, String text) {
-        if (webElement.getText().isEmpty()) {
-            // TO DO NOTHING
-        } else {
-            try {
-                webElement.clear();
-                logger.trace(webElementName + ".sendKeys() called");
-            } catch (Exception ex) {
-                logger.warn(webElementName + " textbox cannot clear.");
-            }
-        }
-        webElement.sendKeys(text);
-    }
 }

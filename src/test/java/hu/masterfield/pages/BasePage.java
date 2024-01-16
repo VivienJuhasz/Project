@@ -53,4 +53,18 @@ public class BasePage {
             logger.warn("BasePage.takeScreenshot was thrown IOException: " + ex.getMessage() + " , " + ex.getStackTrace());
         }
     }
+    public void setTextbox(WebElement webElement, String webElementName, String text) {
+        if (webElement.getText().isEmpty()) {
+            // TO DO NOTHING
+        } else {
+            try {
+                webElement.clear();
+                logger.trace(webElementName + ".clear() called");
+            } catch (Exception ex) {
+                logger.warn(webElementName + " textbox cannot clear.");
+            }
+        }
+        webElement.sendKeys(text);
+        logger.trace(webElementName + ".sendKeys() called");
+    }
 }

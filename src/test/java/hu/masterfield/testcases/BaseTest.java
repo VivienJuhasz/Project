@@ -49,7 +49,7 @@ public class BaseTest implements TestWatcher {
     public static void cleanup() {
         logger.info("BaseTest.cleanup called.");
 
-        driver.quit();
+        //driver.quit();
 
         logger.info("BaseTest.cleanup WebDriver quit.");
     }

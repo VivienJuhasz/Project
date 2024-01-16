@@ -1,7 +1,10 @@
 package hu.masterfield.testcases;
 
+import hu.masterfield.datatypes.RegistrationData;
 import hu.masterfield.pages.GDPRBannerPage;
 import hu.masterfield.pages.LoginPage;
+import hu.masterfield.pages.RegistrationFirstPage;
+import hu.masterfield.pages.RegistrationSecondPage;
 import hu.masterfield.utils.Screenshot;
 import io.qameta.allure.Description;
 import org.apache.logging.log4j.LogManager;
@@ -10,6 +13,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
@@ -24,7 +29,7 @@ public class TC2_Registration_Test extends BaseTest {
     @Tag("TC2")
     @Tag("Regisztráció")
 
-    public void TC2_Registration_Test(TestInfo testInfo) {
+    public void TC2_Registration_Test(TestInfo testInfo) throws InterruptedException, IOException {
         Thread.sleep(10000);
         logger.info(testInfo + " started");
 
@@ -37,8 +42,16 @@ public class TC2_Registration_Test extends BaseTest {
         Screenshot.takesScreenshot(driver);
         logger.info("Login page will be opened...");
 
-        LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage(driver);
         assertTrue(loginPage.isLoaded());
         loginPage.registrationStart();
+
+        RegistrationData registrationData = new RegistrationData();
+        logger.info(registrationData);
+
+        logger.info("RegistrationFirstPage betöltése");
+        RegistrationFirstPage registrationFirstPage = new RegistrationFirstPage(driver);
+        assertTrue(registrationFirstPage.isLoaded());
+        RegistrationSecondPage registrationSecondPage = registrationFirstPage.registrationFirstPage();
     }
 }
