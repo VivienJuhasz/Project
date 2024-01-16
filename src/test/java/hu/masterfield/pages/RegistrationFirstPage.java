@@ -130,7 +130,7 @@ public class RegistrationFirstPage extends BasePage {
 
         setTextbox(socialSecurityNumberInput, "socialSecurityNumberInput", registrationData.getSocialSecurityNumber());
 
-        setTextbox(emailAddressInput, "emailAddressInput", registrationData.getAddress());
+        setTextbox(emailAddressInput, "emailAddressInput", registrationData.getEmailAddress());
 
         setTextbox(regPasswordInput, "regPasswordInput", registrationData.getPassword());
 
