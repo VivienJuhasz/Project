@@ -1,0 +1,5 @@
+accountTypes,ownershipTypes,accountName,openingBalance
+Savings,Individual,ACC1,10000
+Money Market,Individual,ACC2,2500
+Savings,Joint,ACC3,3000
+Money Market,Joint,ACC4,4000

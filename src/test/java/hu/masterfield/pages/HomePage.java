@@ -236,7 +236,7 @@ public class HomePage extends BasePage {
      * HomePage ellenőrzése
      */
     @Step("HomePage ellenőrzése.")
-    public void ValidateHomePage() {
+    public void validateHomePage() {
         logger.info("validateHomePage called");
         assertEquals("Digital Bank", driver.getTitle());
         assertTrue(driver.getCurrentUrl().endsWith("/bank/home"));
@@ -247,7 +247,7 @@ public class HomePage extends BasePage {
      * HomePage ellenőrzése profil módosítása után
      */
     @Step("HomePage ellenőrzése profil módosítása után.")
-    public void ValidateHomePageAfterModifyProfile() {
+    public void validateHomePageAfterModifyProfile() {
         logger.info("validateHomePageAfterModifyProfile called");
         assertEquals("Digital Bank", driver.getTitle());
         assertTrue(driver.getCurrentUrl().endsWith("/bank/home"));

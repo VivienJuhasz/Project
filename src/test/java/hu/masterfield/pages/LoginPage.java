@@ -83,7 +83,8 @@ public class LoginPage extends BasePage {
 
         assertEquals("Digital Bank", driver.getTitle());
         assertTrue(driver.getCurrentUrl().endsWith("/bank/register"));
-        assertEquals("Success", registrationSuccessfulLabel.getText());
+        //assertTrue(registrationSuccessfulLabel.getText().contains("Success"));
+        assertEquals("Registration Successful. Please Login.", registrationSuccessfulLabel.getText());
 
         return isRegistrationSuccessful;
     }

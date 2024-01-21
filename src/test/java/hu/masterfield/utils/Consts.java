@@ -14,6 +14,16 @@ public class Consts {
     public static final String LOGIN_USERNAME = "login.userName";
     public static final String LOGIN_PASSWORD = "login.password";
 
+
+    // Konstatnsok a Savingshez
+
+    public static final String ACCOUNT_TYPES_SAVINGS = "Savings";
+    public static final String ACCOUNT_TYPES_MONEY_MARKET = "Money Market";
+    public static final String OWNERSHIP_TYPES_INDIVIDUAL = "Individual";
+    public static final String OWNERSHIP_TYPES_JOINT = "Joint";
+    public static final String SAVINGS_DATA_CSV = "/savingsData.csv";
+    public static final String SAVE_SAVINGS_DATA_CSV = "target/dumpSavings.csv";
+
     //Konstansok a regisztrációhoz
     public static final String REG_TITLE = "reg.title";
     public static final String REG_FIRST_NAME = "reg.firstName";
