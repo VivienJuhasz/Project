@@ -17,7 +17,7 @@ public class Consts {
 
     // Konstatnsok a Savingshez
 
-    public static final String ACCOUNT_TYPES_SAVINGS = "Savings";
+    public static final String ACCOUNT_TYPES_SAVINGS = "Saving";
     public static final String ACCOUNT_TYPES_MONEY_MARKET = "Money Market";
     public static final String OWNERSHIP_TYPES_INDIVIDUAL = "Individual";
     public static final String OWNERSHIP_TYPES_JOINT = "Joint";

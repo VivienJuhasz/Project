@@ -34,15 +34,15 @@ public class HomePage extends BasePage {
     @FindBy(id="new-checking-menu-item")
     private WebElement newCheckingMenuItem;
 
-    // Savings menu
+    // Saving menu
     @FindBy(id="savings-menu")
     private WebElement savingsMenu;
 
-    // Savings menu -> View Savings
+    // Saving menu -> View Saving
     @FindBy(id="view-savings-menu-item")
     private WebElement viewSavingsMenuItem;
 
-    // Savings menu -> New Savings
+    // Saving menu -> New Saving
     @FindBy(id="new-savings-menu-item")
     private WebElement newSavingsMenuItem;
 
@@ -90,10 +90,10 @@ public class HomePage extends BasePage {
     private WebElement withdrawLink;
 
     /**
-     * A HomePage-ről elnavigál a Create Savings oldalra a menüben.
-     * @return a megnyitott Create Savings oldal objektuma
+     * A HomePage-ről elnavigál a Create Saving oldalra a menüben.
+     * @return a megnyitott Create Saving oldal objektuma
      */
-    @Step("Navigálás a Create Savings oldalra.")
+    @Step("Navigálás a Create Saving oldalra.")
     public CreateSavingsPage gotoNewSavingsPage() {
         logger.info("gotoNewSavingsPage() called.");
 
@@ -109,10 +109,10 @@ public class HomePage extends BasePage {
     }
 
     /**
-     *  HomePage-ről elnavigál a View Savings oldalra a menüben.
-     * @return a megnyitott View Savings oldal objektuma
+     *  HomePage-ről elnavigál a View Saving oldalra a menüben.
+     * @return a megnyitott View Saving oldal objektuma
      */
-    @Step("Navigálás a View Savings oldalra.")
+    @Step("Navigálás a View Saving oldalra.")
     public ViewSavingsAccountsPage gotoViewSavingsPage() {
         logger.info("gotoViewSavingsPage() called.");
 
@@ -144,11 +144,11 @@ public class HomePage extends BasePage {
     }
 
     /**
-     * HomePage-ről elnavigál a Savings/Transactions oldalra a menüben.
-     * @return Savings/Transactions oldal objektuma
+     * HomePage-ről elnavigál a Saving/Transactions oldalra a menüben.
+     * @return Saving/Transactions oldal objektuma
      */
 
-    @Step("Navigálás a 'View Savings' oldalon található tranzakciós táblázat oldalára.")
+    @Step("Navigálás a 'View Saving' oldalon található tranzakciós táblázat oldalára.")
     public TransactionsPage gotoTransactionsPage() {
         logger.info("gotoTransactionsPage() called.");
 
