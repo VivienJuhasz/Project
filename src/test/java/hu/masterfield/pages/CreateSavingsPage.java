@@ -60,8 +60,8 @@ public class CreateSavingsPage extends BasePage {
      * @return ViewSavingsAccountPage, ha sikerült létrehozni a SAving típusú objektumot
      */
     @Step("Új Saving létrehozása")
-    public ViewSavingsAccountsPage creatNewSavings(Saving saving) {
-        logger.info("creatNewSaving() called.");
+    public ViewSavingsAccountsPage createNewSavings(Saving saving) {
+        logger.info("createNewSaving() called.");
 
         if (saving.getAccountTypes().equals(Consts.ACCOUNT_TYPES_SAVINGS)) {
             //RadioButton esetében ez az ellenőrzés nem szükséges.
@@ -75,10 +75,10 @@ public class CreateSavingsPage extends BasePage {
             radioMoneyMarket.click();
         }
         if (saving.getOwnershipTypes().equals(Consts.OWNERSHIP_TYPES_INDIVIDUAL)) {
-            radioMoneyMarket.click();
+            radioIndividual.click();
         }
         if (saving.getOwnershipTypes().equals(Consts.OWNERSHIP_TYPES_JOINT)) {
-            radioMoneyMarket.click();
+            radioJoint.click();
         }
 
         //textName.sendKeys(saving.getAccountName());

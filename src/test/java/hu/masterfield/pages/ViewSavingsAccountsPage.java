@@ -93,8 +93,10 @@ public class ViewSavingsAccountsPage extends BasePage {
 
     private WebElement findAccount(String accountName) {
         for (WebElement card : cards) {
-            String labelAccountName = card.findElement(By.xpath("//div[@class='h4 m-0' and @contenteditable='true']"))
-                    .getText();
+            //String labelAccountName = card.findElement(By.xpath("//div[@class='h4 m-0' and @contenteditable='true']"))
+              //      .getText();
+            String labelAccountName = card.findElements(By.tagName("div")).get(0)
+                  .getText();
             if (labelAccountName.equals(accountName)) {
                 return card;
             }
