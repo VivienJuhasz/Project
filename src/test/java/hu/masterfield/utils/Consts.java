@@ -55,4 +55,6 @@ public class Consts {
     public static final String MOD_HOME_PHONE= "mod.homePhone";
     public static final String MOD_MOBILE_PHONE = "mod.mobilePhone";
     public static final String MOD_WORK_PHONE = "mod.workPhone";
+
+    public static final String USER_ID = "api.userID";
 }
